@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app03.dao.StudentMapper">
+	<select id="findAll" resultType="com.briup.app03.bean.Student">
+	select * from tbl_student
+	</select>
+	
+	<select id="findById" parameterType="long" resultType="com.briup.app03.bean.Student">
+	select * from tbl_student where id=#{id}
+	</select>
+	
+	<delete id="deleteById" parameterType="long">
+		delete from tbl_student where id=#{id}
+	</delete>
+	
+	<insert id="insert" parameterType="com.briup.app03.bean.Student">
+		insert into tbl_student values(null,#{name},#{age})
+	</insert>
+	
+	<update id="update" parameterType="com.briup.app03.bean.Student">
+		update tbl_student
+		set name=#{name},age=#{age}
+		where id=#{id}
+	</update>
+</mapper>
