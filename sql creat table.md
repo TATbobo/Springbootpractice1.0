@@ -1,4 +1,4 @@
-# 数据库建表语句:
+# 数据库建表语句:smile::
 create table table_name
 (
   id int primary key,
