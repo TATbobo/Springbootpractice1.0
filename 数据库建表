@@ -1,8 +1,7 @@
 # 数据库建表语句:
-:heart:
 create table table_name
 (
-  :+1:id int primary key,
+  id int primary key,
   name varchar(255),
   othertable_id int,
   contstraint othertable foreign key(othertable_id) references(id)
